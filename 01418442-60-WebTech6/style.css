@@ -40,6 +40,7 @@ body {
 	object-fit: cover;
 	background-color: #eee;
 	border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
 	border-bottom-right-radius: 0.7rem;
 }
 .country_data {
