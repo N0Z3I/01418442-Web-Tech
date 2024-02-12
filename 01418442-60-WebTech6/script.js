@@ -45,9 +45,8 @@ searchBtn.addEventListener("click", function () {
   }
 });
 
-getCountry("japan");
+getCountry("Thailand");
 getCountry("USA");
 getCountry("Netherlands");
 getCountry("Egypt");
 getCountry("Australia");
-getCountry("France")
