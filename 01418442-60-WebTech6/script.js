@@ -3,6 +3,7 @@
 const countries = document.querySelector(".countries");
 const countryInput = document.getElementById("countryInput");
 const searchBtn = document.getElementById("searchBtn");
+const regionSelect = document.getElementById("regionSelect");
 
 const getCountry = function (country) {
   const req = new XMLHttpRequest();
@@ -39,12 +40,28 @@ const getCountry = function (country) {
 
 searchBtn.addEventListener("click", function () {
   const countryName = countryInput.value.trim();
+  const region = regionSelect.value.trim();
   if (countryName !== "") {
     countries.innerHTML = "";
     getCountry(countryName);
+  } else if (region !== "") {
+    countries.innerHTML = "";
+    const req = new XMLHttpRequest();
+    req.open("GET", `https://restcountries.com/v3.1/region/${region}`);
+    req.send();
+
+    req.addEventListener("load", function () {
+      if (req.status >= 200 && req.status < 300) {
+        const data = JSON.parse(this.responseText);
+        data.forEach((country) => {
+          getCountry(country.name.common);
+        });
+      } else {
+        console.error("Failed to fetch countries by region");
+      }
+    });
   }
 });
-
 getCountry("Thailand");
 getCountry("USA");
 getCountry("Netherlands");
