@@ -34,6 +34,7 @@ getCountry("USA");
 getCountry("Netherlands");
 getCountry("Egypt");
 getCountry("Australia");
+getCountry("France")
 // const emptySpace = document.querySelector(".space");
 
 // const html = `<h2>New Message:</h2><p>this is a message from script</p>`;
