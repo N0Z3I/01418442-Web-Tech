@@ -13,18 +13,26 @@ html {
 body {
 	font-family: system-ui;
 	color: #555;
-	background-color: #F7EFE5;
+	background-color: #b4d4ff;
 	min-height: 100vh;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+    justify-content: center;
 }
+nav {
+    background-color: #eef5ff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+    width: 550px;
+    height: 230px;
+    margin-top: 30px;
+  }
 .container {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
 }
-.countries {
+.countries {  
 	display: flex;
 	font-size: 2rem;
 	opacity: 0;
