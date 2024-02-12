@@ -16,7 +16,7 @@ body {
 	background-color: #b4d4ff;
 	min-height: 100vh;
 	display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 nav {
     background-color: #eef5ff;
