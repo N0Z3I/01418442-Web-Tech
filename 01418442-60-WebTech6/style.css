@@ -44,9 +44,10 @@ nav {
 	font-size: 1.8rem;
 	border-radius: 0.7rem;
 	margin: 0 3rem;
+  max-width: 40rem;
 }
 .country_img {
-	width: 40rem;
+  width: 40rem;
 	height: 23rem;
 	object-fit: cover;
 	background-color: #eee;
