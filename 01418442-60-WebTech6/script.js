@@ -62,8 +62,8 @@ searchBtn.addEventListener("click", function () {
     });
   }
 });
-getCountry("Thailand");
-getCountry("USA");
-getCountry("Netherlands");
-getCountry("Egypt");
-getCountry("Australia");
+// getCountry("Japan");
+// getCountry("Argentina");
+// getCountry("France");
+// getCountry("Senegal");
+// getCountry("Australia");
