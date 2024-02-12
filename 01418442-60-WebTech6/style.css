@@ -10,7 +10,7 @@ html {
 body {
 	font-family: system-ui;
 	color: #555;
-	background-color: #f7f7f7;
+	background-color: #FFFBF5;
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
@@ -41,7 +41,6 @@ body {
 	background-color: #eee;
 	border-top-left-radius: 0.7rem;
     border-top-right-radius: 0.7rem;
-	border-bottom-right-radius: 0.7rem;
 }
 .country_data {
 	padding: 2.5rem 3.75rem 3rem 3.75rem;
