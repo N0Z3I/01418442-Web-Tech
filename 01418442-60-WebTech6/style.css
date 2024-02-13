@@ -37,8 +37,8 @@ nav {
 	font-size: 2rem;
 	opacity: 0;
 	transition: opacity 1s;
-  justify-content: center;
   align-items: center;
+  margin-left: -24px;
 }
 .country {
 	background-color: #fff;
