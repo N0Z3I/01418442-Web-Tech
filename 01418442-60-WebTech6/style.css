@@ -37,6 +37,7 @@ nav {
 	font-size: 2rem;
 	opacity: 0;
 	transition: opacity 1s;
+  justify-content: center;
 }
 .country {
 	background-color: #fff;
@@ -52,7 +53,8 @@ nav {
 	object-fit: cover;
 	background-color: #eee;
 	border-top-left-radius: 0.7rem;
-    border-top-right-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+
 }
 .country_data {
 	padding: 2.5rem 3.75rem 3rem 3.75rem;
