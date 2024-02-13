@@ -38,6 +38,7 @@ nav {
 	opacity: 0;
 	transition: opacity 1s;
   justify-content: center;
+  align-items: center;
 }
 .country {
 	background-color: #fff;
@@ -63,6 +64,7 @@ nav {
 .country_name {
 	font-size: 2.7rem;
 	margin-bottom: 0.7rem;
+  color: #000;
 }
 .country_region {
 	font-size: 1.4rem;
