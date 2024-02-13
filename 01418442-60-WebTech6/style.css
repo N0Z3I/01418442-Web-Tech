@@ -24,7 +24,7 @@ nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 60px;
     width: 550px;
-    height: 290px;
+    height: 300px;
     margin-top: 20px;
   }
 .container {
@@ -81,7 +81,7 @@ nav {
     font-size: 1.5rem;
 }
 #countryInput {
-    width: 300px;
+    width: 320px;
     height: 45px;
     padding: 10px;
     font-size: 16px;
@@ -92,7 +92,7 @@ nav {
   }
 
   #searchBtn {
-    width: 100px;
+    width: 97.5px;
     height: 45px;
     background-color: #86b6f6;
     color: #fff;
@@ -108,7 +108,7 @@ nav {
   }
 
   #regionSelect {
-    width: 415px;
+    width: 430px;
     height: 45px;
     padding: 0.5rem 1rem;
     font-size: 16px;
