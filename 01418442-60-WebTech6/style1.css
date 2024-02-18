@@ -38,6 +38,8 @@ h2 {
     height: 100px;
     border-radius: 50%;
     margin-right: 10px;
+    border: 3px solid #000;
+    transition: 0.5s ease;
 }
 
 p {
@@ -62,3 +64,7 @@ button {
 button:hover {
     background-color: #b4d4ff;
 }
+
+.member-item img:hover {
+    transform: scale(1.05);
+  }
