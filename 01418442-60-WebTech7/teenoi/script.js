@@ -1,4 +1,4 @@
-const form = document.getElementById('add-food-form');
+const form = document.getElementById('food-form');
 const foodName = document.getElementById('food-name');
 const foodPrice = document.getElementById('food-price');
 const foodTable = document.getElementById('food-table');
@@ -12,16 +12,33 @@ async function fetchFoodData() {
   try {
     const response = await fetch(foodAPI);
     const data = await response.json();
-    return data.meals; // Get the meals array from the data
+    return data.meals.map(food => ({
+      name: food.strMeal,
+      image: food.strMealThumb,
+      price: parseFloat(food.idMeal)
+    }));
   } catch (error) {
     console.error('Error fetching food data:', error);
   }
 }
 
+function createFoodItem(food) {
+  const tr = document.createElement('tr');
+  tr.classList.add('food-item');
+  tr.innerHTML = `
+    <td class="food-image"><img src="${food.image}" alt="${food.name}" width="100"></td>
+    <td class="food-name">${food.name}</td>
+    <td class="food-price">${food.price || ''}</td>
+    <td class="remove-food"><button data-index="${foodList.indexOf(food)}">Remove</button></td>
+  `;
+  return tr;
+}
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (!foodName.value || !foodPrice.value) return;
-  foodList.push({ name: foodName.value, price: parseFloat(foodPrice.value) });
+  const food = { name: foodName.value, price: parseFloat(foodPrice.value) };
+  foodList.push(food);
   renderFoodList(foodList);
   foodName.value = '';
   foodPrice.value = '';
@@ -30,15 +47,13 @@ form.addEventListener('submit', (e) => {
 
 function renderFoodList(foods) {
   foodTable.querySelector('tbody').innerHTML = '';
-  foods.forEach((food, i) => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-        <td><img src="${food.strMealThumb}" alt="${food.strMeal}" width="100"></td><br>
-        <td>${food.strMeal}</td>
-        <td>${food.strPrice || ''}</td>
-      `;
-    foodTable.querySelector('tbody').appendChild(tr);
+  foods.forEach(food => {
+    foodTable.querySelector('tbody').appendChild(createFoodItem(food));
   });
+
+  // Add event listener to remove buttons
+  const removeButtons = document.querySelectorAll('.remove-food button');
+  removeButtons.forEach((button, index) => button.addEventListener('click', () => removeFood(index)));
 }
 
 fetchFoodData().then((foods) => {
@@ -53,7 +68,7 @@ function removeFood(index) {
 
 function calculateTotal() {
   total = foodList.reduce((acc, cur) => acc + cur.price, 0);
-  totalPrice.textContent = total;
+  totalPrice.textContent = `Total: $${total.toFixed(2)}`;
 }
 
 clearBill.addEventListener('click', () => {

@@ -11,7 +11,6 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
   background-color: #b4d4ff;
 }
@@ -22,45 +21,76 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 60px;
   width: 1000px;
-  height: 600px;
-  justify-content: center;
-  align-items: center;
+  height: 3700px;
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
-    color: #86b6f6;
-    font-size: 38px;
-    text-align: center;
+  color: #86b6f6;
+  font-size: 38px;
+  text-align: center;
+}
+
+#food-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 #food-name {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 18px;
-    outline: none;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  outline: none;
 }
 
 #food-price {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 18px;
-    outline: none;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  outline: none;
 }
 
 button {
-    width: 150px;
-    height: 45px;
-    background-color: #86b6f6;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    padding: auto;
-    cursor: pointer;
+  width: 150px;
+  height: 45px;
+  background-color: #86b6f6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: auto;
+  cursor: pointer;
+}
+
+#food-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+th {
+  text-align: left;
+}
+
+.food-image {
+  width: 100px;
+}
+
+.remove-food {
+  text-align: center;
 }
