@@ -66,7 +66,7 @@ header {
     height: 100%;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(245.59deg, #46C2CB 0%, #0174BE 28.53%, #2F58CD 75.52%);
+    background: linear-gradient(245.59deg, #46C2CB 10%, #0174BE 29.53%, #00337C 70.52%);
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -108,7 +108,7 @@ section {
 }
 
 .hero-img img{
-    width: 660px;
+    width: 600px;
     height: auto;
 }
 
