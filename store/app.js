@@ -5,6 +5,16 @@ const express = require('express');
 // middleware
 const app = express();
 
+app.use('/', (request, response, next) => {
+    console.log('Defalut page, always runs');
+    next();
+})
+
+app.use('/add-product', (request, response, next) => {
+    console.log('Say Wi from middleware');
+    response.send('<h1>Add Product<h1>');
+})
+
 app.use((request, response, next) => {
     console.log('Say Wi from middleware');
     next();
