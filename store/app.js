@@ -1,34 +1,15 @@
-const http = require('http');
+const express = require("express");
 
-const express = require('express');
-
-// middleware
+const bodyParser = require("body-parser");
 const app = express();
 
-app.use('/', (request, response, next) => {
-    console.log('Defalut page, always runs');
-    next();
-});
+const adminRoutes = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
 
-app.use('/add-product', (request, response, next) => {
-    console.log('Say Wi from middleware');
-    response.send('<form action ="/message" method="POST"><input type="text" name ="message"><button type="submit">Add Product</button></form>');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/admin", adminRoutes);
+app.use(shopRoutes);
+app.use((req, res, next) => {
+  res.status(404).send("<h1>Page not found,see the VAR!!</h1>");
 });
-
-app.use('/product', (request, response, next) => {
-    console.log(req.body);
-});
-
-app.use((request, response, next) => {
-    console.log('Say Wi from middleware');
-    next();
-});
-
-app.use((request, response, next) => {
-    console.log('Say Fi from another middleware');
-    response.send('<h1>This is WiFi<h1>');
-});
-
-//const server = http.createServer(app);
-//server.listen(3000);
 app.listen(3000);
