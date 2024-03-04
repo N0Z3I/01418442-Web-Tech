@@ -12,7 +12,7 @@ app.use('/', (request, response, next) => {
 
 app.use('/add-product', (request, response, next) => {
     console.log('Say Wi from middleware');
-    response.send('<h1>Add Product<h1>');
+    response.send('<form action ="/message" method="POST"><input type="text" name ="message"><button type="submit">Add Product</button></form>');
 });
 
 app.use((request, response, next) => {
