@@ -15,6 +15,10 @@ app.use('/add-product', (request, response, next) => {
     response.send('<form action ="/message" method="POST"><input type="text" name ="message"><button type="submit">Add Product</button></form>');
 });
 
+app.use('/product', (request, response, next) => {
+    console.log(req.body);
+});
+
 app.use((request, response, next) => {
     console.log('Say Wi from middleware');
     next();
