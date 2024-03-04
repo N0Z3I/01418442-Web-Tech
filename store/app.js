@@ -7,12 +7,12 @@ const app = express();
 
 app.use((request, response, next) => {
     console.log('Say Wi from middleware');
-    next()
+    next();
 });
 
 app.use((request, response, next) => {
     console.log('Say Fi from another middleware');
-    response.send('<h1>This is WiFi<h1>')
+    response.send('<h1>This is WiFi<h1>');
 });
 
 const server = http.createServer(app);
