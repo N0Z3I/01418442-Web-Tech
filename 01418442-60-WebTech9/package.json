@@ -1,0 +1,15 @@
+{
+  "name": "01418442-60-webtech9",
+  "version": "1.0.0",
+  "description": "Learning NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Pasin Sangjun",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
