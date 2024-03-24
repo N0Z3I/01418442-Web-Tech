@@ -1,0 +1,28 @@
+<%- include('includes/head.ejs') -%>
+<link rel="stylesheet" href="/css/form.css">
+</head>
+  <body>
+    <%- include('includes/headerbar.ejs') -%>
+    <main>
+      <h1>กรอกรายวิชาที่เรียน</h1>
+        <form class="product-form" action="/frmAddSubject" method="POST" >
+            <div class="form-control">
+                <label for="idsubject">ID_Subject</label>
+                <input type="text" name="idsubject" id="idsubject"/>
+
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name"/>
+                <label for="grade">Grade</label>
+                <input type="text" name="grade" id="grade" maxlength="1" pattern="[ABCDEFW+]"/>
+
+                <label for="credit">Credit</label>
+                <input type="number" step="any"  name="credit" id="credit"/>
+
+                
+            </div>
+            <button class="btn" type="submit">Add Subject</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

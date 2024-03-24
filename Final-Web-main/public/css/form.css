@@ -1,0 +1,49 @@
+.product-form{
+    max-width: 90%;
+    margin: auto;
+}
+.form-control{
+    margin: 1rem 0;
+}
+.form-control label,
+.form-control input{
+    display: block;
+    width: 100%;
+}
+.form-control input{
+    border: 1px solid white;
+    font: inherit;
+    border-radius: 2px;
+}
+.form-control input:focus{
+    outline-color: gray;
+}
+
+main{
+    background-color: #fff8ee;
+    width: 60%;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    margin: 5rem auto;
+}
+.btn{
+    border: 1px solid lightseagreen;
+    background: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 1rem 2rem;
+}
+.btn:hover,
+.btn:active{
+    background: #f24b88;
+    color: #fff;
+}
+label{
+    font-size: 1.75rem;
+}
+h1{
+    text-align: center;
+}
+input[type="text"],input[type="number"]{
+    font-size: 2rem;
+}

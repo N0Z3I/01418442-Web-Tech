@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 65%;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+
+body {
+  color: #333;
+  height: 100vh;
+  padding: 2rem;
+  background-color: #95bfa4;
+}
+
+.header {
+  display: flex;
+  padding: 60px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  background-color: #f2889b;
+}
+
+.app {
+  position: relative;
+  max-width: 100rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 6fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem;
+}
+
+.gpa {
+  grid-column: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.gpa__label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+
+.gpa__date {
+  font-size: 1.4rem;
+  color: #666;
+}
+
+.gpa__value {
+  font-size: 4.5rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  padding: 0 1rem;
+}
+
+.transcript {
+  grid-row: 2 / span 3;
+  border-radius: 1rem;
+  background-color: #fff8ee;
+  overflow-y: scroll;
+}
+
+.transcript__row {
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.transcript__code,
+.transcript__subject,
+.transcript__grade,
+.transcript__credit {
+  font-size: 1.8rem;
+  margin-right: 2.5rem;
+  text-align: left;
+}
+
+.transcript__subject {
+  text-align: left;
+  min-width: 60%;
+}
+
+.transcript__grade,
+.transcript__credit {
+  margin-left: auto;
+}
+
+.transcript__grade {
+  font-weight: 400;
+  color: #f28444;
+}
+
+.total {
+  grid-column: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.total__label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+
+.total__date {
+  font-size: 1.8rem;
+  color: #666;
+}
+
+.total__value {
+  font-size: 2.5rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  align-self:first baseline;
+}
+.header__home{
+    
+    align-items: flex-end;
+    justify-content: space-between;
+    
+    margin-bottom: 1rem;
+}
+.header__home a{
+    font-size: 3.25rem;
+    color: white;
+    text-decoration: none;
+}
+.header__home a:hover{
+    font-size: 3.25rem;
+    color: black;
+}
